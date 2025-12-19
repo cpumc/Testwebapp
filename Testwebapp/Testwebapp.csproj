@@ -4,6 +4,13 @@
     <TargetFramework>net10.0</TargetFramework>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
+    <ApplicationInsightsResourceId>/subscriptions/04540ae3-4f0a-4f55-a620-4799ddd3f31d/resourceGroups/az-test-git/providers/microsoft.insights/components/az-web-test-git</ApplicationInsightsResourceId>
+    <UserSecretsId>3cdcdf02-2fb4-4920-8b29-b4a87fdac378</UserSecretsId>
   </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Azure.Identity" Version="1.17.0" />
+    <PackageReference Include="Microsoft.ApplicationInsights.AspNetCore" Version="2.23.0" />
+  </ItemGroup>
 
 </Project>
