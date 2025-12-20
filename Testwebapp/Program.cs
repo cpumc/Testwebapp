@@ -1,3 +1,6 @@
+using Microsoft.EntityFrameworkCore;
+using Testwebapp.Data;
+
 namespace Testwebapp
 {
     public class Program
@@ -8,6 +11,8 @@ namespace Testwebapp
 
             // Add services to the container.
             builder.Services.AddControllersWithViews();
+            var connectionString = builder.Configuration.GetConnectionString("AzureSqlConnection");
+            builder.Services.AddDbContext<AppDbContext>(options=>options.UseSqlServer(connectionString));
 
             var app = builder.Build();
 
